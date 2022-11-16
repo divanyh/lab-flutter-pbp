@@ -1,3 +1,22 @@
+# [Tugas 7](#tugas-7-elemen-dasar-flutter) dan [Tugas 8](#tugas-8-flutter-form) PBP
+
+# Tugas 8: Flutter Form
+### Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
+Kedua method tersebut berguna untuk 'pindah' ke page yang lainnya. Perbedaan di antara keduanya adalah:
+- Navigator.push: page saat ini di-pop terelbih dahulu lalu baru page yang dituju di-push ke screen
+- Navigator.pushReplacement: page yang dituju di-push terlebih dahulu lalu page sebelumnya di-pop ketika page yang dituju selesai masuk <br>
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya
+- Form: untuk menyediakan borang isian yang meminta input pengguna
+- TextFormFiedls: untuk menyediakan salah satu elemen form yang berfungsi meminta inputan berupa text
+- Card: untuk menampung suatu infromasi. Pada lab ini digunakan untuk menampilkan list budget
+- DropDownButton: untuk menyediakan salah satu elemen form yang telah disediakan pilihan inputnya dan berfungsi meminta inputan berupa satu pilihan <br>
+
+### Sebutkan jenis-jenis event yang ada pada Flutter
+
+### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+
 # Tugas 7: Elemen Dasar Flutter
 
 ### Apa yang dimaksud dengan stateless widget dan stateful widget? Jelaskan perbedaan dari keduanya
