@@ -1,7 +1,6 @@
-import 'package:counter_7/main.dart';
 import 'package:flutter/material.dart';
-import 'package:counter_7/data_budget.dart';
-import 'package:flutter/services.dart';
+import 'package:counter_7/data_model.dart';
+import 'package:counter_7/drawer.dart';
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
@@ -12,9 +11,9 @@ class MyFormPage extends StatefulWidget {
 
 class _MyFormPageState extends State<MyFormPage> {
   final _formKey = GlobalKey<FormState>();
-  String _namaLengkap = "";
-  double nominal = 0;
-  String tipeBudget = 'Pemasukan';
+  String _judul = "";
+  double _nominal = 0;
+  String _tipeBudget = 'Pemasukan';
   List<String> listTipeBudget = ['Pemasukan', 'Pengeluaran'];
 
   @override
@@ -23,43 +22,7 @@ class _MyFormPageState extends State<MyFormPage> {
       appBar: AppBar(
         title: Text('Form'),
       ),
-      drawer: Drawer(
-        child: Column(
-          children: [
-            // Menambahkan clickable menu
-            ListTile(
-              title: const Text('Counter'),
-              onTap: () {
-                // Route menu ke halaman utama
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyHomePage()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Form'),
-              onTap: () {
-                // Route menu ke halaman form
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyFormPage()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Data Budget'),
-              onTap: () {
-                // Route menu ke halaman data budget
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyDataPage()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: DrawerSection(),
       body: Form(
         key: _formKey,
         child: SingleChildScrollView(
@@ -81,13 +44,13 @@ class _MyFormPageState extends State<MyFormPage> {
                 // Menambahkan behavior saat nama diketik
                 onChanged: (String? value) {
                   setState(() {
-                    _namaLengkap = value!;
+                    _judul = value!;
                   });
                 },
                 // Menambahkan behavior saat data disimpan
                 onSaved: (String? value) {
                   setState(() {
-                    _namaLengkap = value!;
+                    _judul = value!;
                   });
                 },
                 // Validator sebagai validasi form
@@ -116,13 +79,13 @@ class _MyFormPageState extends State<MyFormPage> {
                 // Menambahkan behavior saat nama diketik
                 onChanged: (value) {
                   setState(() {
-                    nominal = double.parse(value);
+                    _nominal = double.parse(value);
                   });
                 },
                 // Menambahkan behavior saat data disimpan
                 onSaved: (String? value) {
                   setState(() {
-                    nominal = double.parse(value!);
+                    _nominal = double.parse(value!);
                   });
                 },
                 // Validator sebagai validasi form
@@ -136,7 +99,7 @@ class _MyFormPageState extends State<MyFormPage> {
             ),
             ListTile(
               trailing: DropdownButton(
-                value: tipeBudget,
+                value: _tipeBudget,
                 icon: const Icon(Icons.keyboard_arrow_down),
                 items: listTipeBudget.map((String items) {
                   return DropdownMenuItem(
@@ -146,7 +109,7 @@ class _MyFormPageState extends State<MyFormPage> {
                 }).toList(),
                 onChanged: (String? newValue) {
                   setState(() {
-                    tipeBudget = newValue!;
+                    _tipeBudget = newValue!;
                   });
                 },
               ),
@@ -161,6 +124,7 @@ class _MyFormPageState extends State<MyFormPage> {
               ),
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
+                  Budget.add(_judul, _nominal, _tipeBudget);
                   showDialog(
                     context: context,
                     builder: (context) {
@@ -177,11 +141,7 @@ class _MyFormPageState extends State<MyFormPage> {
                               Center(child: const Text('Informasi Data')),
                               SizedBox(height: 20),
                               // TODO: Munculkan informasi yang didapat dari form
-                              Text(_namaLengkap +
-                                  '\n' +
-                                  '$nominal' +
-                                  '\n' +
-                                  tipeBudget),
+                              Text('Data berhasil ditambahkan'),
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context);
