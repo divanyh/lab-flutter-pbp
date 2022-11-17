@@ -8,14 +8,68 @@ Kedua method tersebut berguna untuk 'pindah' ke page yang lainnya. Perbedaan di 
 
 ### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya
 - Form: untuk menyediakan borang isian yang meminta input pengguna
-- TextFormFiedls: untuk menyediakan salah satu elemen form yang berfungsi meminta inputan berupa text
+- TextFormFields: untuk menyediakan salah satu elemen form yang berfungsi meminta inputan berupa text
 - Card: untuk menampung suatu infromasi. Pada lab ini digunakan untuk menampilkan list budget
 - DropDownButton: untuk menyediakan salah satu elemen form yang telah disediakan pilihan inputnya dan berfungsi meminta inputan berupa satu pilihan <br>
 
 ### Sebutkan jenis-jenis event yang ada pada Flutter
+- AnimationEvent
+- AnimationPlaybackEvent
+- ApplicationCacheErrorEvent
+- BeforeInstallPromptEvent
+- BeforeUnloadEvent
+- BlobEvent
+- ClipboardEvent
+- CloseEvent
+- CustomEvent
+- DeviceMotionEvent
+- DeviceOrientationEvent
+- ErrorEvent
+- ExtendableEvent
+- FontFaceSetLoadEvent
+- GamepadEvent
+- HashChangeEvent
+- KeyEvent
+- MediaEncryptedEvent
+- MediaKeyMessageEvent
+- MediaQueryListEvent
+- MediaStreamEvent
+- MediaStreamTrackEvent
+- MessageEvent 
+- MidiConnectionEvent 
+- MidiMessageEvent 
+- MutationEvent 
+- PageTransitionEvent 
+- PaymentRequestUpdateEvent 
+- PopStateEvent 
+- PresentationConnectionAvailableEvent 
+- PresentationConnectionCloseEvent 
+- ProgressEvent 
+- PromiseRejectionEvent 
+- RtcDataChannelEvent 
+- RtcDtmfToneChangeEvent 
+- RtcPeerConnectionIceEvent 
+- RtcTrackEvent 
+- SecurityPolicyViolationEvent 
+- SensorErrorEvent 
+- SpeechRecognitionError 
+- SpeechRecognitionEvent 
+- SpeechSynthesisEvent 
+- StorageEvent 
+- TrackEvent
+- TransitionEvent
+- UIEvent 
+- VRDeviceEvent 
+- VRDisplayEvent 
+- VRSessionEvent 
 
 ### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter
+Cara kerja navigator dalam "mengganti" page adalah dengan menumpuk page tujuan di atas page semula seperti stack. Page tujuan akan dipush ke stack page yang ditampilkan<br>
+
 ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+1. Membuat drawer untuk menampilkan list berisi navigasi page
+2. Membuat class Budget untuk menjadi objek yang dibuat ketika pengisian form dan ditampilkan pada data Budget
+3. Membuat form yang meminta input kepada pengguna untuk mengisi atribut-atribut objek Budget baru
 
 # Tugas 7: Elemen Dasar Flutter
 
