@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:counter_7/tambah_budget.dart';
 import 'package:counter_7/data_budget.dart';
 import 'package:counter_7/main.dart';
+import 'package:counter_7/mywatchlist.dart';
 
 class DrawerSection extends StatelessWidget {
   const DrawerSection({super.key});
@@ -39,6 +40,17 @@ class DrawerSection extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const MyDataPage()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('mywatchlist'),
+            onTap: () {
+              // Route menu ke halaman data budget
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const mywatchlistPage()),
               );
             },
           ),

@@ -1,7 +1,5 @@
-import 'package:counter_7/main.dart';
-import 'package:counter_7/tambah_budget.dart';
 import 'package:flutter/material.dart';
-import 'package:counter_7/data_model.dart';
+import 'package:counter_7/model/data_model.dart';
 import 'package:counter_7/drawer.dart';
 
 // class DataModel extends ChangeNotifier {

@@ -1,4 +1,28 @@
-# [Tugas 7](#tugas-7-elemen-dasar-flutter) dan [Tugas 8](#tugas-8-flutter-form) PBP
+# [Tugas 7](#tugas-7-elemen-dasar-flutter), [Tugas 8](#tugas-8-flutter-form), dan [Tugas 9](#tugas-9-integrasi-web-service-pada-platform) PBP
+
+# Tugas 9: Integrasi Web Service pada Flutter
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? 
+bisa, karena flutter memiliki serializer json yang dapat digunakan inline
+
+### Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Tidak, karena tidak efisien dan efektif untuk project dalam skala besar
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya
+- ElevatedButton: untuk membuat button yang berfungsi untuk kembali ke page sebelumnya
+- Navigator: untuk menjalankan fungsi ke ataupun kembali ke suatu page
+- FutureBuilder: untuk membuat halaman yang isinya baru akan ada setelah didapatkan datanya
+- 
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter
+1. Flutter melakukan pemanggilan ke url yang sudah berisi data json
+2. Flutter melakukan parsing data tersebut 
+3. Flutter melakukan mapping model yang dimilikinya dengan data json, disesuaikan dengan atribut model dari model dan data json
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+1. Menambahkan http dependencies kepada aplikasi flutter
+2. Menambahkan code untuk melakukan pemanggilan terhadap url yang berisi data
+3. Menambahkan code untuk melakukan parsing dan mapping data dengan model
+4. Memberikan ability terhadap card untuk diklik dan menampilkan page detail movie
+5. Menambahkan button untuk kembali
 
 # Tugas 8: Flutter Form
 ### Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
